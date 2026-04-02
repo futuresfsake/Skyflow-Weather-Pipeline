@@ -17,7 +17,7 @@ def peek_at_data():
         conn = psycopg2.connect(**DB_CONFIG)
         cur = conn.cursor()
         
-        cur.execute("SELECT * FROM raw_weather ORDER BY recorded_at DESC LIMIT 5;")
+        cur.execute("SELECT * FROM clean weather ORDER BY recorded_at DESC LIMIT 5;")
         rows = cur.fetchall()
         
         print("\n--- 🌦️ LATEST WEATHER DATA IN DATABASE ---")
